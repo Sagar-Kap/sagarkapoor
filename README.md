@@ -1,9 +1,7 @@
-# Personal Blog built on NextJS
+# Personal Blog built on NextJS & MDX
 
-Design Inspirations:
+# Figma Design that is being followed
 
-- [Musings - Blog template for Webflow](https://dribbble.com/shots/22954673-Musings-Blog-template-for-Webflow)
-- [Personal-website-Newsfeed](https://dribbble.com/shots/22947240-Personal-website-Newsfeed)
-- [DailyUI-035-Blog-Post](https://dribbble.com/shots/22892497-DailyUI-035-Blog-Post)
-- [Blog-Landing-Page](https://dribbble.com/shots/22936833-Blog-Landing-Page)
-- [Text-Editor](https://dribbble.com/shots/22928399-Text-Editor)
+[This](<https://www.figma.com/file/W9Cz9j91HRBXKrqGxWgmHl/Web-Developer-Portfolio-Website-Template-(Community)?type=design&mode=design&t=WnIwIebF1Pv9lxbC-1>) Design will be used for the Front End.
+
+![Figma Design for Sagar Kapoor](/public/figma-design.png)
