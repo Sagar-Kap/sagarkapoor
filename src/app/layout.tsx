@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ubuntu } from "../styles/fonts";
+import { ubuntu } from "@styles/fonts";
 import "@styles/globals.css";
 import Navbar from "@components/layout/navbar";
 import Footer from "@components/layout/footer";
