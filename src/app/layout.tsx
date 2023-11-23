@@ -16,12 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ibm_plex_mono.className}>
-      <body
-        className="bg-bg-1 text-white flex 
-        flex-col"
-      >
+      <body className="bg-bg-1 text-white flex flex-col h-screen">
         <Navbar />
-        <main>{children}</main>
+        <main className="flex-grow my-8 md:my-24 space-y-16">{children}</main>
         <Footer />
       </body>
     </html>
