@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ubuntu } from "@styles/fonts";
+import { ibm_plex_mono } from "@styles/fonts";
 import "@styles/globals.css";
 import Navbar from "@components/layout/navbar";
 import Footer from "@components/layout/footer";
@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={ubuntu.className}>
+    <html lang="en" className={ibm_plex_mono.className}>
+      <body
+        className="bg-bg-1 text-white flex 
+        flex-col"
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />
