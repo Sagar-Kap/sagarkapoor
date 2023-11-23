@@ -33,10 +33,10 @@ const Navbar = () => {
       {/* INFO: Section with Navbar components*/}
       <section
         className="wb-container flex justify-between px-4 py-6
-    items-center"
+        items-center"
       >
         <Link href="/">
-          <p>
+          <p className="text-xl">
             <span className="text-brand-1">&lt;SK/&gt;</span>&nbsp;Sagar Kapoor
           </p>
         </Link>
@@ -57,10 +57,10 @@ const Navbar = () => {
 
         {/* INFO: Navigation links */}
         <span
-          className={`flex md:flex flex-col md:flex-row gap-10 font-bold text-4xl
-      md:text-lg fixed md:static bg-opacity-95 bg-black md:bg-inherit pt-44
-      md:pt-0 inset-0 md:left-0 duration-300
-      ${isMenuOpen ? "left-0" : "left-[100%]"}`}
+          className={`flex md:flex flex-col md:flex-row gap-10 text-4xl
+          md:text-lg fixed md:static bg-opacity-95 bg-black md:bg-inherit pt-44
+          md:pt-0 inset-0 md:left-0 duration-300
+          ${isMenuOpen ? "left-0 items-center" : "left-[100%]"}`}
         >
           {navlinks.map((link) => {
             const isActive = pathname === link.href;
@@ -69,7 +69,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`wb-link ${isActive ? "text-yellow-300" : ""} `}
+                className={`wb-link ${isActive ? "text-brand-1" : ""} `}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
