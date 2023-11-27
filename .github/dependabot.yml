@@ -23,7 +23,6 @@ updates:
     labels:
       - "dependencies"
     assignees:
-      - Jarmos-san
       - Sagar-Kap
     commit-message:
       prefix: "chore: "
