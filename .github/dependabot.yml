@@ -1,0 +1,33 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "12:00"
+      timezone: "Europe/Sofia"
+    labels:
+      - "dependencies"
+    assignees:
+      - Sagar-Kap
+    commit-message:
+      prefix: "chore: "
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "06:00"
+      timezone: "Asia/Kolkata"
+    labels:
+      - "dependencies"
+    assignees:
+      - Jarmos-san
+      - Sagar-Kap
+    commit-message:
+      prefix: "chore: "
+    ignore:
+      - dependency-name: astro
+        update-types:
+          - version-update:semver-major
