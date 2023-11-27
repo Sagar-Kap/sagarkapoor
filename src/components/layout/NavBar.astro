@@ -1,0 +1,56 @@
+---
+
+type NavlinkTypes = { label: string; href: string };
+
+const navlinks: Array<NavlinkTypes> = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  // TODO: Uncomment the following line after a complete portfolio is availabe {
+  // label: "Portfolio", href: "/portfolio" },
+  { label: "Contact", href: "/contact" },
+];
+
+---
+
+<nav>
+    {/* INFO: Section with Navbar components*/}
+    <section
+      class="wb-container flex justify-between px-4 py-6
+      items-center"
+    >
+      <a href="/">
+        <p class="text-xl">
+          <span class="text-brand-1">&lt;SK/&gt;</span>&nbsp;Sagar Kapoor
+        </p>
+    </a>
+
+      {/* INFO: Mobile menu button for mobile devices and related small screens */}
+      <button class="md:hidden z-10"
+      >
+        <span class="sr-only">Open Main Menu</span>
+        
+      </button>
+
+      {/* INFO: Navigation links */}
+      <span
+        class={`flex md:flex flex-col md:flex-row gap-10 text-4xl
+        md:text-lg fixed md:static bg-opacity-95 bg-black md:bg-inherit pt-44
+        md:pt-0 inset-0 md:left-0 duration-300`}
+      >
+        {navlinks.map((link) => {
+         
+
+          return (
+            <a
+              href={link.href}
+              class={`wb-link text-brand-1 `}
+            
+            >
+              {link.label}
+            </a>
+          );
+        })}
+      </span>
+    </section>
+  </nav>
