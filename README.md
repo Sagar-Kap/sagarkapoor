@@ -1,7 +1,7 @@
-# Personal Blog built on NextJS & MDX
+# Blog built with Astro
 
-# Figma Design that is being followed
+The Figma design used for this project:
 
-[This](<https://www.figma.com/file/W9Cz9j91HRBXKrqGxWgmHl/Web-Developer-Portfolio-Website-Template-(Community)?type=design&mode=design&t=WnIwIebF1Pv9lxbC-1>) Design will be used for the Front End.
+[Link to design](<https://www.figma.com/file/W9Cz9j91HRBXKrqGxWgmHl/Web-Developer-Portfolio-Website-Template-(Community)?type=design&node-id=0%3A1&mode=design&t=AnHIpTSqKNJPd6wQ-1>)
 
-![Figma Design for Sagar Kapoor](/public/figma-design.png)
+![Design cover](/public/figma-design.png)
