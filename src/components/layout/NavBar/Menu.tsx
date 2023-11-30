@@ -2,11 +2,6 @@ import { useEffect, useState } from "preact/hooks";
 
 type NavlinkTypes = { label: string; href: string };
 
-type MenuButtons = {
-  openMenu: string;
-  closeMenu: string;
-};
-
 const navlinks: Array<NavlinkTypes> = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -16,7 +11,7 @@ const navlinks: Array<NavlinkTypes> = [
   { label: "Contact", href: "/contact" },
 ];
 
-const Menu = ({ openMenu, closeMenu }: MenuButtons) => {
+const Menu = ({ openMenu, closeMenu }: any) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
 
   //INFO: Prevent Scroll When Mobile NavBar is open
@@ -25,6 +20,8 @@ const Menu = ({ openMenu, closeMenu }: MenuButtons) => {
       ? document.body.classList.add("overflow-hidden")
       : document.body.classList.remove("overflow-hidden");
   }, [isMenuOpen]);
+
+  const closeMenuInstance = <div>{closeMenu}</div>;
 
   return (
     <nav>
@@ -45,17 +42,17 @@ const Menu = ({ openMenu, closeMenu }: MenuButtons) => {
           onClick={() => setMenuOpen(!isMenuOpen)}
           className="md:hidden z-10"
         >
-          {isMenuOpen ? (
-            <div>
-              <span className="sr-only">Close Main Menu</span>
-              <div>{closeMenu}</div>
-            </div>
-          ) : (
-            <div>
-              <span className="sr-only">Open Main Menu</span>
-              <div className="text-2xl">{openMenu}</div>
-            </div>
-          )}
+          <span className="sr-only">Close Main Menu</span>
+
+          <div
+            className={`text-2xl stroke-white ${isMenuOpen ? "" : "hidden"}`}
+          >
+            {closeMenu}
+          </div>
+
+          <div className={`text-2xl ${isMenuOpen ? "hidden" : ""}`}>
+            {openMenu}
+          </div>
         </button>
 
         {/* INFO: Navigation links */}
