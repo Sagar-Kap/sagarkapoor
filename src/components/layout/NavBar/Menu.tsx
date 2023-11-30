@@ -64,11 +64,7 @@ const Menu = ({ openMenu, closeMenu }: any) => {
         >
           {navlinks.map((link) => {
             return (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-              >
+              <a href={link.href} onClick={() => setMenuOpen(false)}>
                 {link.label}
               </a>
             );
