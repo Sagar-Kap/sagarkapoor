@@ -8,9 +8,11 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   integrations: [tailwind(), preact()],
   vite: {
-    plugins: [Icons({
-      compiler: "astro",
-      autoInstall: true
-    })]
-  }
+    plugins: [
+      Icons({
+        compiler: "astro",
+        autoInstall: true,
+      }),
+    ],
+  },
 });
