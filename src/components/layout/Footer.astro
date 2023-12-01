@@ -70,10 +70,13 @@ const socialIcons: Array<SocialIconTypes> = [
       {/* INFO: Section for the logo and the all the links*/}
       {/* TODO: Refactor using Grids instead of Flexbox to improve code quality
       & add some vertical spacing to each section */}
+
+      
       <div
         class="wb-container md:flex px-4 justify-between py-12 space-y-8
         sm:space-y-0"
       >
+      
         {/* INFO: Section for the Logo */}
         <section class="flex flex-col items-center gap-4 pb-4">
           <a href="/">
@@ -99,12 +102,12 @@ const socialIcons: Array<SocialIconTypes> = [
           <span class="flex space-x-4 justify-center my-8">
             {socialIcons.map((icon) => (
               <a
-                key={icon.href}
+              
                 href={icon.href}
                 target="_blank"
                 rel="noreferrer"
               >
-                <icon.icon size={30} class="hover:scale-125" />
+                <icon.icon class="hover:scale-125" />
               </a>
             ))}
           </span>
@@ -159,7 +162,9 @@ const socialIcons: Array<SocialIconTypes> = [
       {/* INFO: Section for the copyright notice */}
       <section class="mb-8 text-center text-white container mx-auto px-4">
         {/* INFO: A simple divider to distinguish the two sections */}
+        
         <hr class="mb-8" />
+
         <small>
           Copyright &copy; 2021-{new Date().getFullYear()} | Weburz LLC | All
           Rights Reserved

@@ -16,7 +16,7 @@ export default {
           1: "#12F7D6",
           2: "#98FAEC",
         },
-        grey: "#98FAEC",
+        grey: "#43454D",
         html: "#E54F26",
         css: "#0C73B8",
         js: "#E7A020",

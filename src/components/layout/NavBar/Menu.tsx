@@ -30,7 +30,7 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
       >
         <a href="/">
           <p className="text-xl">
-            <span className="text-brand-1">&lt;SK/&gt;</span>&nbsp;Sagar Kapoor
+            <span className="text-brand-1">&lt;SK/&gt;</span>&nbsp;SagarKapoor
           </p>
         </a>
 
@@ -74,6 +74,12 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
             );
           })}
         </span>
+      </section>
+
+      <section class="container mx-auto px-4">
+        {/* INFO: A simple divider */}
+
+        <hr class="mb-8 border-b-2 border-grey" />
       </section>
     </nav>
   );
