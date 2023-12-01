@@ -11,7 +11,7 @@ const navlinks: Array<NavlinkTypes> = [
   { label: "Contact", href: "/contact" },
 ];
 
-const Menu = ({ openMenu, closeMenu }: any) => {
+const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
 
   //INFO: Prevent Scroll When Mobile NavBar is open
@@ -61,8 +61,14 @@ const Menu = ({ openMenu, closeMenu }: any) => {
           ${isMenuOpen ? "left-0 items-center" : "left-[100%]"}`}
         >
           {navlinks.map((link) => {
+            const isActive = currentPath === link.href;
+
             return (
-              <a href={link.href} onClick={() => setMenuOpen(false)}>
+              <a
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={`wb-link ${isActive ? "text-brand-1" : ""}`}
+              >
                 {link.label}
               </a>
             );
