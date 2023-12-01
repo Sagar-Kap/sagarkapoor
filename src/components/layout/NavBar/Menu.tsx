@@ -79,7 +79,7 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
       <section class="container mx-auto px-4">
         {/* INFO: A simple divider */}
 
-        <hr class="mb-8 border-b-2 border-grey" />
+        <hr class="mb-8 border-b-1 border-grey" />
       </section>
     </nav>
   );
