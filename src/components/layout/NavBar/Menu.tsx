@@ -21,8 +21,6 @@ const Menu = ({ openMenu, closeMenu }: any) => {
       : document.body.classList.remove("overflow-hidden");
   }, [isMenuOpen]);
 
-  const closeMenuInstance = <div>{closeMenu}</div>;
-
   return (
     <nav>
       {/* INFO: Section with Navbar components*/}
