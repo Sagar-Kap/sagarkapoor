@@ -2,11 +2,10 @@
 import Menu from "./Menu";
 import OpenMenu from "~icons/ic/outline-menu";
 import CloseMenu from "~icons/ic/outline-close";
-const currentPath = Astro.url.pathname
-
+const currentPath = Astro.url.pathname;
 ---
 
 <Menu currentPath={currentPath} client:load>
-    <OpenMenu slot="open-menu" />
-    <CloseMenu slot="close-menu"/>
+  <OpenMenu slot="open-menu" />
+  <CloseMenu slot="close-menu" />
 </Menu>

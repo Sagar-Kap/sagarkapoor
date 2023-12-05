@@ -63,114 +63,93 @@ const socialIcons: Array<SocialIconTypes> = [
     icon: FaHome,
   },
 ];
-
 ---
 
-    <footer class="bg-bg-2">
-      {/* INFO: Section for the logo and the all the links*/}
-      {/* TODO: Refactor using Grids instead of Flexbox to improve code quality
-      & add some vertical spacing to each section */}
-      
-      
-      <div
-        class="wb-container md:flex px-4 justify-between py-12 space-y-8
-        sm:space-y-0"
-      >
-      
-        {/* INFO: Section for the Logo */}
-        <section class="flex flex-col items-center gap-4 pb-4">
-          <a href="/">
-            <p class="text-xl">
-              <span class="text-brand-1">&lt;SK/&gt;</span>&nbsp;Sagar
-              Kapoor
-            </p>
-          </a>
-          <a
-            href="mailto:sagar.kapoor@weburz.com"
-            class="underline underline-offset-2 hover:text-brand-1"
-          >
-            sagar.kapoor@weburz.com
-          </a>
-        </section>
+<footer class="bg-bg-2">
+  {/* INFO: Section for the logo and the all the links*/}
+  {
+    /* TODO: Refactor using Grids instead of Flexbox to improve code quality
+      & add some vertical spacing to each section */
+  }
 
-        {/* INFO: Section for Social Media Links */}
-        <section>
-          <span class="font-bold text-xl">
-            <span class="text-brand-1">Fo</span>llow Me
-          </span>
+  <div class="wb-container md:flex px-4 justify-between py-12 space-y-8
+        sm:space-y-0">
+    {/* INFO: Section for the Logo */}
+    <section class="flex flex-col items-center gap-4 pb-4">
+      <a href="/">
+        <p class="text-xl">
+          <span class="text-brand-1">&lt;SK/&gt;</span>&nbsp;Sagar Kapoor
+        </p>
+      </a>
+      <a href="mailto:sagar.kapoor@weburz.com" class="underline underline-offset-2
+       hover:text-brand-1">
+        sagar.kapoor@weburz.com
+      </a>
+    </section>
 
-          <span class="flex space-x-4 justify-center my-8">
-            {socialIcons.map((icon) => (
-              <a
-              
-                href={icon.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <icon.icon class="hover:scale-125" />
-              </a>
-            ))}
-          </span>
-        </section>
+    {/* INFO: Section for Social Media Links */}
+    <section>
+      <span class="font-bold text-xl">
+        <span class="text-brand-1">Fo</span>llow Me
+      </span>
 
-        {/* INFO: Section for the navigation links */}
-        <section>
-          <span class="font-bold text-xl">
-            <span class=" text-brand-1">Ex</span>plore
-          </span>
+      <span class="flex space-x-4 justify-center my-8">
+        {
+          socialIcons.map((icon) => (
+            <a href={icon.href} target="_blank" rel="noreferrer">
+              <icon.icon class="hover:scale-125" />
+            </a>
+          ))
+        }
+      </span>
+    </section>
 
-          {footerlinks.explore.map((link) => {
-            const isActive = currentPath === link.href;
+    {/* INFO: Section for the navigation links */}
+    <section>
+      <span class="font-bold text-xl">
+        <span class="text-brand-1">Ex</span>plore
+      </span>
 
-            return (
-              <a
-          
-                href={link.href}
-                class={`block py-2 wb-link ${
-                  isActive ? "text-brand-1" : ""
-                } `}
-              >
-                {link.label}
-              </a>
-            );
-          })}
-        </section>
+      {
+        footerlinks.explore.map((link) => {
+          const isActive = currentPath === link.href;
 
-        {/* INFO: A section for and contact legal links */}
-        <section>
-          <span class="text-xl font-bold">
-            <span class="text-brand-1">Us</span>eful Links
-          </span>
-          {footerlinks.company.map((link) => {
-            const isActive = currentPath === link.href;
+          return (
+            <a href={link.href} class={`block py-2 wb-link ${isActive ? "text-brand-1" : ""} `}>
+              {link.label}
+            </a>
+          );
+        })
+      }
+    </section>
 
-            return (
-              <a
-             
-                href={link.href}
-                class={`block py-2 wb-link ${
-                  isActive ? "text-brand-1" : ""
-                }`}
-              >
-                {link.label}
-              </a>
-            );
-          })}
-        </section>
-      </div>
+    {/* INFO: A section for and contact legal links */}
+    <section>
+      <span class="text-xl font-bold">
+        <span class="text-brand-1">Us</span>eful Links
+      </span>
+      {
+        footerlinks.company.map((link) => {
+          const isActive = currentPath === link.href;
 
-      {/* INFO: Section for the copyright notice */}
-      <section class="mb-8 text-center text-white container mx-auto px-4">
-        {/* INFO: A simple divider to distinguish the two sections */}
-        
-        <hr class="mb-8 border-b-1 border-grey" />
+          return (
+            <a href={link.href} class={`block py-2 wb-link ${isActive ? "text-brand-1" : ""}`}>
+              {link.label}
+            </a>
+          );
+        })
+      }
+    </section>
+  </div>
 
-        <small>
-          Copyright &copy; 2021-{new Date().getFullYear()} | Weburz LLC | All
-          Rights Reserved
-        </small>
-      </section>
-    </footer>
-  
+  {/* INFO: Section for the copyright notice */}
+  <section class="mb-8 text-center text-white container mx-auto px-4">
+    {/* INFO: A simple divider to distinguish the two sections */}
 
-   
+    <hr class="mb-8 border-b-1 border-grey" />
+
+    <small>
+      Copyright &copy; 2021-{new Date().getFullYear()} | Weburz LLC | All Rights Reserved
+    </small>
+  </section>
+</footer>
