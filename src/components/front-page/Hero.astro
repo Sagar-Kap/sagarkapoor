@@ -1,10 +1,97 @@
 ---
 import { Image } from "astro:assets";
 import profileImage from "../../assets/pfp.jpg";
+
+import MailIcon from "~icons/ic/round-mail-outline";
+import Location from "~icons/bi/geo-alt";
+import Work from "~icons/bi/suitcase-lg";
+import Link from "~icons/bi/link-45deg";
+import Download from "~icons/ic/outline-file-download";
+
+type HeroListItems = {
+  icon: typeof MailIcon | typeof Location | typeof Work | typeof Link;
+  title: "sagar.kapoor@weburz.com" | "Sofia, Bulgaria" | "Full-Time" | "Weburz.com";
+  link:
+    | "mailto:sagar.kapoor@weburz.com"
+    | "https://maps.app.goo.gl/VDb3jH63HSdyMX9p6"
+    | "/portfolio"
+    | "https://weburz.com";
+};
+
+type HeroButtons = {
+  title: "REACT" | "NEXT.JS" | "JAVASCRIPT" | "NODE.JS";
+  link:
+    | "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    | "https://nextjs.org/"
+    | "https://react.dev/"
+    | "https://nodejs.org/en";
+};
+
+const herobuttons: Array<HeroButtons> = [
+  { title: "REACT", link: "https://react.dev/" },
+  { title: "NEXT.JS", link: "https://nextjs.org/" },
+  { title: "JAVASCRIPT", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { title: "NODE.JS", link: "https://nodejs.org/en" },
+];
+
+const herolist: Array<HeroListItems> = [
+  { icon: MailIcon, title: "sagar.kapoor@weburz.com", link: "mailto:sagar.kapoor@weburz.com" },
+  { icon: Location, title: "Sofia, Bulgaria", link: "https://maps.app.goo.gl/VDb3jH63HSdyMX9p6" },
+  { icon: Work, title: "Full-Time", link: "/portfolio" },
+  { icon: Link, title: "Weburz.com", link: "https://weburz.com" },
+];
 ---
 
-<section>
-  <Image src={profileImage} alt="Profile Image" />
+<section
+  class="mx-4 py-16 space-y-4 border-white vsm:border-4 flex flex-col items-center
+        rounded-tl-[200px] rounded-br-[160px]"
+>
+  <Image
+    src={profileImage}
+    alt="Profile Image"
+    width={100}
+    height={100}
+    class="border-brand-2 border-4 rounded-full mx-auto"
+  />
 
-  <section></section>
+  <span class="font-bold text-4xl">Sagar</span>
+  <h1>Full Stack Engineer</h1>
+
+  {/* Info: Div with Info about developer*/}
+
+  <div class="space-y-4">
+    {
+      herolist.map((item) => {
+        return (
+          <a href={item.link} class="flex gap-3 items-center wb-link">
+            <item.icon class="text-brand-1" /> {item.title}
+          </a>
+        );
+      })
+    }
+  </div>
+
+  {/* Info: Div to showcase the tech that person is efficient in*/}
+
+  <div class="flex flex-row gap-1 py-4">
+    {
+      herobuttons.map((item) => {
+        return (
+          <button
+            class="rounded-3xl border-2 py-1 px-1 bg-brand-1 text-bg-1 border-none 
+                  text-xs"
+          >
+            {item.title}
+          </button>
+        );
+      })
+    }
+  </div>
+
+  {/* Info: Button to download Resume*/}
+
+  <button class="flex items-center gap-4 rounded-3xl border-2 py-2 px-4 font-sans
+              bg-white text-bg-1"
+    >Download CV {(<Download />)}</button
+  >
 </section>

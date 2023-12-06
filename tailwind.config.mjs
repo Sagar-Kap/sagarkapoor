@@ -5,6 +5,9 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    screens: {
+      vsm: "300px",
+    },
     extend: {
       fontFamily: {
         mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
