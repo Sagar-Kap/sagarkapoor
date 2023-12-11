@@ -22,10 +22,7 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
   return (
     <nav>
       {/* INFO: Section with Navbar components*/}
-      <section
-        className="wb-container flex justify-between px-4 py-6
-        items-center"
-      >
+      <section className="wb-container flex justify-between px-4 py-6 items-center">
         <a href="/">
           <p className="text-xl">
             <span className="text-brand-1">&lt;SK/&gt;</span>&nbsp;SagarKapoor
@@ -43,10 +40,10 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
 
         {/* INFO: Navigation links */}
         <span
-          className={`flex md:flex flex-col md:flex-row gap-10 text-4xl
-          md:text-lg fixed md:static bg-opacity-95 bg-black md:bg-inherit pt-44
-          md:pt-0 inset-0 md:left-0 duration-300
-          ${isMenuOpen ? "left-0 items-center" : "left-[100%]"}`}
+          className={`flex md:flex flex-col md:flex-row gap-10 text-4xl md:text-lg fixed 
+                    md:static bg-opacity-95 bg-black md:bg-inherit pt-44 md:pt-0 
+                    inset-0 md:left-0 duration-300
+                    ${isMenuOpen ? "left-0 items-center" : "left-[100%]"}`}
         >
           {navlinks.map((link) => {
             const isActive = currentPath === link.href;
