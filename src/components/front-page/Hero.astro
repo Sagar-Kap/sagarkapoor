@@ -7,13 +7,6 @@ import Location from "~icons/bi/geo-alt";
 import Work from "~icons/bi/suitcase-lg";
 import Link from "~icons/bi/link-45deg";
 import Download from "~icons/ic/outline-file-download";
-import Grid from "~icons/bx/bxs-grid-alt"
-import Person from "~icons/bx/user"
-import Code from "~icons/bx/code"
-import Monitor from "~icons/ic/round-monitor"
-import Edit from "~icons/bx/bxs-edit"
-
-
 
 type HeroListItems = {
   icon: typeof MailIcon | typeof Location | typeof Work | typeof Link;
@@ -47,83 +40,28 @@ const herolist: Array<HeroListItems> = [
   { icon: Work, title: "Full-Time", link: "/portfolio" },
   { icon: Link, title: "Weburz.com", link: "https://weburz.com" },
 ];
-
-
-
-type menuIcons = {
-icon: 
-    | typeof Grid 
-    | typeof Person 
-    | typeof Code 
-    | typeof Edit 
-    | typeof Monitor 
-    | typeof MailIcon
-title: 
-  | "Default"
-  | "About Me"
-  | "Skills"
-  | "Work"
-  | "Blogs"
-  | "Contact"
-link: 
-  | "#"
-  | "#about"
-  | "#skills"
-  | "#work"
-  | "#blogs"
-  | "#contact"
-}
-
-
-const menuArray: Array<menuIcons> = [
-  {
-    icon: Grid, title: "Default", link: "#"
-  },
-  {
-    icon: Person, title: "About Me", link: "#about"
-  },
-  {
-    icon: Code, title: "Skills", link: "#skills"
-  },
-  {
-    icon: Monitor, title: "Work", link: "#work"
-  },
-  {
-    icon: Edit, title: "Blogs", link: "#blogs"
-  },
-  {
-    icon: MailIcon, title: "Contact", link: "#contact"
-  }
-]
 ---
 
 {/* TODO: Script for the Buttons*/}
 {/* TODO: Animate Buttons on clicks*/}
 
-<section class="wb-container grid grid-cols-1 lg:grid-cols-3 items-center gap-10 mx-auto">
+<section class="wb-container grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-12 items-center
+          gap-10 mx-auto">
   {/* INFO: Div for the Info card*/}
 
-
-  <nav class="border-white border-2 rounded-3xl flex flex-col items-center bg-bg-2">
-    {
-      menuArray.map((item) => {
-        return (
-          <a href={item.link}><item.icon /></a>
-        )
-      })
-    }
-  </nav>
-
- <h1 class="col-span-3 hidden lg:block text-brand-1 font-sans text-6xl">Developer</h1>
+  <h1 class="col-span-5 xl:col-span-1 ml-4 xl:col-start-5 hidden lg:block text-brand-2 font-sans text-6xl">
+    Developer
+  </h1>
 
   <div
-    class="rounded-tl-[150px] rounded-br-[150px] vsm:shadow-[-5px_-5px_0px_0px_rgba(152,250,236)]
-        border-white vsm:border-2 mx-auto px-4 py-16 pt-0 vsm:pt-16 flex flex-col"
+    class="rounded-tl-[150px] rounded-br-[120px] vsm:shadow-[-5px_-5px_0px_0px_rgba(152,250,236)]
+        border-white vsm:border-2 mx-auto px-4 py-6 pt-0 vsm:pt-6 flex flex-col
+          lg:col-span-5 xl:col-span-3 xl:col-start-2"
   >
     <Image
       src={profileImage}
       alt="Profile Image"
-      width={100}
+      width={110}
       height={100}
       class="border-brand-2 border-4 rounded-full mx-auto"
     />
@@ -171,33 +109,34 @@ const menuArray: Array<menuIcons> = [
     >
   </div>
 
-  <div class="flex flex-col gap-6 mx-3">
+  <div class="flex flex-col gap-6 md:col-span-2 lg:col-start-2 xl:col-span-5 xl:col-start-5">
     <section class="text-left">
       <span class="text-brand-1 text-sm">&lt;h1&gt;</span>
-      <p class="font-sans text-2xl ml-5">Hey</p>
-      <p class="font-sans text-2xl ml-5">I'm <span class="text-brand-1">Sagar</span>,</p>
-      <p class="font-sans text-2xl ml-5">Full-Stack Developer</p>
+      <p class="font-sans text-2xl sm:text-4xl ml-5">Hey</p>
+      <p class="font-sans text-2xl sm:text-4xl ml-5">I'm <span class="text-brand-1">Sagar</span>,</p>
+      <p class="font-sans text-2xl sm:text-4xl ml-5">Full-Stack Developer</p>
       <span class="text-brand-1 text-sm">&lt;/h1&gt;</span>
     </section>
 
     <section class="text-left">
       <span class="text-brand-1 text-sm">&lt;p&gt;</span>
 
-      <p class="font-sans text-2xl ml-5">
+      <p class="font-sans ml-5">
         I help businesses grow by crafting amazing web experiences. If you&apos;re looking for a developer that likes to
         get stuff done,
       </p>
       <span class="text-brand-1 text-sm">&lt;/p&gt;</span>
     </section>
-  
-  <span class="text-brand-1 mx-auto my-2 text-3xl flex flex-row items-center gap-4"
-    >Let's Talk <MailIcon class="bg-grey rounded-full p-2 text-3xl" />
-  </span>
+
+    <span class="text-brand-1 ml-5 my-2 text-3xl text flex flex-row items-center gap-4"
+      >Let's Talk <MailIcon class="bg-grey rounded-full p-2 text-3xl" />
+    </span>
   </div>
 
-  
-
-  <section class="bg-bg-2 rounded-[100px] space-y-16 p-10 py-16 text-left mx-10">
+  <section
+    class="bg-bg-2 rounded-[100px] space-y-16 p-10 py-16 text-left mx-10
+              sm:mx-auto md:col-span-1 xl:col-start-10"
+  >
     <p class="flex items-center gap-4">
       <span class="text-brand-1 text-5xl">4</span> Programming Languages
     </p>

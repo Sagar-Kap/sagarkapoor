@@ -1,9 +1,12 @@
 ---
 import Hero from "../components/front-page/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import MiniMenu from "../components/front-page/MiniMenu.astro";
+
 const title = "Sagar Kapoor";
 ---
 
 <Layout title={title}>
+  <MiniMenu />
   <Hero />
 </Layout>
