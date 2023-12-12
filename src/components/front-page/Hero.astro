@@ -7,6 +7,13 @@ import Location from "~icons/bi/geo-alt";
 import Work from "~icons/bi/suitcase-lg";
 import Link from "~icons/bi/link-45deg";
 import Download from "~icons/ic/outline-file-download";
+import Grid from "~icons/bx/bxs-grid-alt"
+import Person from "~icons/bx/user"
+import Code from "~icons/bx/code"
+import Monitor from "~icons/ic/round-monitor"
+import Edit from "~icons/bx/bxs-edit"
+
+
 
 type HeroListItems = {
   icon: typeof MailIcon | typeof Location | typeof Work | typeof Link;
@@ -40,6 +47,54 @@ const herolist: Array<HeroListItems> = [
   { icon: Work, title: "Full-Time", link: "/portfolio" },
   { icon: Link, title: "Weburz.com", link: "https://weburz.com" },
 ];
+
+
+
+type menuIcons = {
+icon: 
+    | typeof Grid 
+    | typeof Person 
+    | typeof Code 
+    | typeof Edit 
+    | typeof Monitor 
+    | typeof MailIcon
+title: 
+  | "Default"
+  | "About Me"
+  | "Skills"
+  | "Work"
+  | "Blogs"
+  | "Contact"
+link: 
+  | "#"
+  | "#about"
+  | "#skills"
+  | "#work"
+  | "#blogs"
+  | "#contact"
+}
+
+
+const menuArray: Array<menuIcons> = [
+  {
+    icon: Grid, title: "Default", link: "#"
+  },
+  {
+    icon: Person, title: "About Me", link: "#about"
+  },
+  {
+    icon: Code, title: "Skills", link: "#skills"
+  },
+  {
+    icon: Monitor, title: "Work", link: "#work"
+  },
+  {
+    icon: Edit, title: "Blogs", link: "#blogs"
+  },
+  {
+    icon: MailIcon, title: "Contact", link: "#contact"
+  }
+]
 ---
 
 {/* TODO: Script for the Buttons*/}
@@ -49,7 +104,17 @@ const herolist: Array<HeroListItems> = [
   {/* INFO: Div for the Info card*/}
 
 
- <h1 class="col-span-4 hidden lg:block text-brand-1 font-sans text-6xl">Developer</h1>
+  <nav class="border-white border-2 rounded-3xl flex flex-col items-center bg-bg-2">
+    {
+      menuArray.map((item) => {
+        return (
+          <a href={item.link}><item.icon /></a>
+        )
+      })
+    }
+  </nav>
+
+ <h1 class="col-span-3 hidden lg:block text-brand-1 font-sans text-6xl">Developer</h1>
 
   <div
     class="rounded-tl-[150px] rounded-br-[150px] vsm:shadow-[-5px_-5px_0px_0px_rgba(152,250,236)]
@@ -128,8 +193,6 @@ const herolist: Array<HeroListItems> = [
   <span class="text-brand-1 mx-auto my-2 text-3xl flex flex-row items-center gap-4"
     >Let's Talk <MailIcon class="bg-grey rounded-full p-2 text-3xl" />
   </span>
-  
-  
   </div>
 
   
