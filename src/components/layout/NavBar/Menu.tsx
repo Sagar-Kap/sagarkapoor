@@ -61,7 +61,7 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
         </span>
       </section>
 
-      <section class="container mx-auto px-4">
+      <section class="wb-container mx-auto px-4">
         {/* INFO: A simple divider */}
 
         <hr class="border-b-1 border-grey" />

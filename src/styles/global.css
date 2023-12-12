@@ -4,7 +4,7 @@
 
 @layer components {
   .wb-container {
-    @apply container mx-auto text-center text-white;
+    @apply sm:container mx-auto text-center text-white;
   }
 
   .wb-link {
