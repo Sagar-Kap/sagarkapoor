@@ -45,14 +45,15 @@ const herolist: Array<HeroListItems> = [
 {/* TODO: Script for the Buttons*/}
 {/* TODO: Animate Buttons on clicks*/}
 
-<section class="wb-container flex flex-col items-center gap-10 px-4 sm:px-12
-                lg:px-52">
+<section class="wb-container grid grid-cols-1 lg:grid-cols-3 items-center gap-10 mx-auto">
   {/* INFO: Div for the Info card*/}
 
+
+ <h1 class="col-span-4 hidden lg:block text-brand-1 font-sans text-6xl">Developer</h1>
+
   <div
-    class="rounded-tl-[200px] rounded-br-[160px] vsm:shadow-[-5px_-5px_0px_0px_rgba(152,250,236)]
-        border-white vsm:border-4 space-y-4 mx-4 px-2 py-16 pt-0 vsm:pt-16 flex
-          flex-col"
+    class="rounded-tl-[150px] rounded-br-[150px] vsm:shadow-[-5px_-5px_0px_0px_rgba(152,250,236)]
+        border-white vsm:border-2 mx-auto px-4 py-16 pt-0 vsm:pt-16 flex flex-col"
   >
     <Image
       src={profileImage}
@@ -67,7 +68,7 @@ const herolist: Array<HeroListItems> = [
 
     {/* INFO: Div with Info about developer*/}
 
-    <div class="space-y-4">
+    <div class="space-y-4 mt-8">
       {
         herolist.map((item) => {
           return (
@@ -99,13 +100,13 @@ const herolist: Array<HeroListItems> = [
     {/* INFO: Button to download Resume*/}
 
     <button
-      class="flex items-center gap-4 rounded-3xl border-2 py-2 mx-auto px-4
+      class="flex items-center gap-4 rounded-3xl border-2 py-2 mr-auto px-4
             font-sans bg-white text-bg-1"
       >Download CV {(<Download />)}</button
     >
   </div>
 
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-6 mx-3">
     <section class="text-left">
       <span class="text-brand-1 text-sm">&lt;h1&gt;</span>
       <p class="font-sans text-2xl ml-5">Hey</p>
@@ -118,18 +119,22 @@ const herolist: Array<HeroListItems> = [
       <span class="text-brand-1 text-sm">&lt;p&gt;</span>
 
       <p class="font-sans text-2xl ml-5">
-        I help business grow by crafting amazing web experiences. If you&apos;re looking for a developer that likes to
+        I help businesses grow by crafting amazing web experiences. If you&apos;re looking for a developer that likes to
         get stuff done,
       </p>
       <span class="text-brand-1 text-sm">&lt;/p&gt;</span>
     </section>
-  </div>
-
-  <span class="text-brand-1 text-3xl flex items-center gap-4"
+  
+  <span class="text-brand-1 mx-auto my-2 text-3xl flex flex-row items-center gap-4"
     >Let's Talk <MailIcon class="bg-grey rounded-full p-2 text-3xl" />
   </span>
+  
+  
+  </div>
 
-  <section class="bg-bg-2 rounded-[100px] space-y-16 p-10 py-16 text-left mx-8 my-8">
+  
+
+  <section class="bg-bg-2 rounded-[100px] space-y-16 p-10 py-16 text-left mx-10">
     <p class="flex items-center gap-4">
       <span class="text-brand-1 text-5xl">4</span> Programming Languages
     </p>
