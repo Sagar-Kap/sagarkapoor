@@ -9,14 +9,14 @@ import Monitor from "~icons/ic/round-monitor";
 type menuIcons = {
   icon: typeof Grid | typeof Person | typeof Code | typeof Edit | typeof Monitor | typeof MailIcon;
   title: "Default" | "About Me" | "Skills" | "Work" | "Blogs" | "Contact";
-  link: "#" | "#about" | "#skills" | "#work" | "#blogs" | "#contact";
+  link: "#home" | "#about" | "#skills" | "#work" | "#blogs" | "#contact";
 };
 
 const menuArray: Array<menuIcons> = [
   {
     icon: Grid,
     title: "Default",
-    link: "#",
+    link: "#home",
   },
   {
     icon: Person,
@@ -45,20 +45,23 @@ const menuArray: Array<menuIcons> = [
   },
 ];
 
-console.log(menuArray[0]);
-
 const MiniMenuInteractive = () => {
+  {
+    /* TODO: Mark the active hash link with a change in Icon color */
+  }
+
   return (
     <nav
       class="border-white border rounded-t-full rounded-b-full hidden lg:flex flex-col
           items-center bg-bg-2 fixed gap-6 p-5"
     >
       {menuArray.map((item) => {
-        const IconComponent = item.icon;
         return (
-          <a href={item.link} class="hover:scale-125 text-lg hover:text-brand-1">
-            {IconComponent}
-          </a>
+          <button class={`hover:scale-125 text-lg hover:text-brand-1`}>
+            <a href={item.link}>
+              <item.icon />
+            </a>
+          </button>
         );
       })}
     </nav>

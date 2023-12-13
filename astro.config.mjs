@@ -1,8 +1,7 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import Icons from "unplugin-icons/vite";
-
 import preact from "@astrojs/preact";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,7 +9,8 @@ export default defineConfig({
   vite: {
     plugins: [
       Icons({
-        compiler: "astro",
+        compiler: "jsx",
+        jsx: "preact",
         autoInstall: true,
       }),
     ],

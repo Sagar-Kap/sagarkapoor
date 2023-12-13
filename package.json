@@ -25,6 +25,8 @@
     "@iconify-json/bi": "^1.1.21",
     "@iconify-json/bx": "^1.1.10",
     "@iconify-json/ic": "^1.1.16",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2",
