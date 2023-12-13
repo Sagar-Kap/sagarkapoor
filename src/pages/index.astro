@@ -2,10 +2,12 @@
 import Hero from "../components/front-page/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import MiniMenu from "../components/front-page/MiniMenu";
+import About from "../components/front-page/About.astro";
 const title = "Sagar Kapoor";
 ---
 
 <Layout title={title}>
   <MiniMenu client:only />
   <Hero />
+  <About />
 </Layout>

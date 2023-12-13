@@ -1,11 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 
 type NavlinkTypes = { label: string; href: string };
-type MenuProps = {
-  openMenu: SVGElement;
-  closeMenu: SVGElement;
-  currentPath: string;
-};
 
 const navlinks: Array<NavlinkTypes> = [
   { label: "Home", href: "/" },
@@ -16,7 +11,11 @@ const navlinks: Array<NavlinkTypes> = [
   { label: "Contact", href: "/contact" },
 ];
 
-const Menu = ({ openMenu, closeMenu, currentPath }: MenuProps) => {
+{
+  /* TODO: Fix the Types */
+}
+
+const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
 
   //INFO: Prevent Scroll When Mobile NavBar is open
