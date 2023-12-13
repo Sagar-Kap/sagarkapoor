@@ -46,9 +46,7 @@ const menuArray: Array<menuIcons> = [
 ];
 
 const MiniMenuInteractive = () => {
-  {
-    /* TODO: Mark the active hash link with a change in Icon color */
-  }
+  const [isClicked, setClick] = useState<string>("#home");
 
   return (
     <nav
@@ -57,11 +55,14 @@ const MiniMenuInteractive = () => {
     >
       {menuArray.map((item) => {
         return (
-          <button class={`hover:scale-125 text-lg hover:text-brand-1`}>
-            <a href={item.link}>
-              <item.icon />
-            </a>
-          </button>
+          <a
+            onClick={() => setClick(item.link)}
+            href={item.link}
+            class={`hover:scale-125 text-lg 
+                  hover:text-brand-1 ${isClicked === item.link ? "text-brand-1" : ""}`}
+          >
+            <item.icon />
+          </a>
         );
       })}
     </nav>
