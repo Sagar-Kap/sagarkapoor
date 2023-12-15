@@ -48,19 +48,19 @@ const herolist: Array<HeroListItems> = [
 <section
   id="home"
   class="wb-container grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-12 items-center
-         gap-10 mx-auto"
+  gap-10 mx-auto sm:mt-10 mb-20"
 >
   {/* INFO: Div for the Info card*/}
 
   <h1 class="col-span-5 xl:col-span-1 ml-4 xl:col-start-5 hidden lg:block text-brand-2
-             font-sans text-6xl">
+      font-sans text-6xl">
     Developer
   </h1>
 
   <div
     class="rounded-tl-[150px] rounded-br-[120px] vsm:shadow-[-5px_-5px_0px_0px_rgba(152,250,236)]
-        border-white vsm:border-2 mx-auto px-4 py-6 pt-0 vsm:pt-6 flex flex-col
-          lg:col-span-5 xl:col-span-3 xl:col-start-2"
+    border-white vsm:border-2 mx-auto px-4 py-6 pt-0 vsm:pt-6 flex flex-col
+    lg:col-span-5 xl:col-span-3 xl:col-start-2"
   >
     <Image
       src={profileImage}
@@ -95,7 +95,7 @@ const herolist: Array<HeroListItems> = [
           return (
             <button
               class="rounded-3xl border-2 py-1 px-1 bg-brand-1 text-bg-1 border-none 
-                    text-xs hover:scale-105"
+              text-xs hover:scale-105"
             >
               {item.title}
             </button>
@@ -106,15 +106,14 @@ const herolist: Array<HeroListItems> = [
 
     {/* INFO: Button to download Resume*/}
 
-    <button
-      class="flex items-center gap-4 rounded-3xl border-2 py-2 mr-auto px-4
-            font-sans bg-white text-bg-1"
+    <button class="flex items-center gap-4 rounded-3xl border-2 py-2 mr-auto px-4
+      font-sans bg-white text-bg-1"
       >Download CV {(<Download />)}</button
     >
   </div>
 
   <div class="flex flex-col gap-6 md:col-span-2 lg:col-start-2 xl:col-span-5
-              xl:col-start-5 mx-4 sm:mx-10">
+       xl:col-start-5 mx-4 sm:mx-10">
     <section class="text-left">
       <span class="text-brand-1 text-sm">&lt;h1&gt;</span>
 
@@ -145,7 +144,7 @@ const herolist: Array<HeroListItems> = [
 
   <section
     class="bg-bg-2 rounded-[100px] space-y-16 p-10 py-16 text-left mx-10
-              sm:mx-auto md:col-span-1 xl:col-start-10"
+    sm:mx-auto md:col-span-1 xl:col-start-10"
   >
     <p class="flex items-center gap-4">
       <span class="text-brand-1 text-5xl">4</span> Programming Languages

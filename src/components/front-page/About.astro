@@ -1,15 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import Work from "../../assets/work.png";
 import Arrow from "../../assets/arrow.svg";
 import Mouse from "~icons/iconamoon/mouse";
 ---
 
-<section
-  id="about"
-  style="background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), 
-  url('topography.png') no-repeat; background-size: cover;"
->
+<section id="about" class="bg-[url('aboutme.png')]">
   <div class="wb-container grid grid-cols-1 sm:grid-cols-8 py-10 gap-10 items-center">
     <div class="hidden lg:flex flex-col items-center gap-2 sm:col-start-4 sm:col-end-6">
       <Mouse class="text-3xl text-brand-1" />
@@ -41,12 +36,5 @@ import Mouse from "~icons/iconamoon/mouse";
       <p>I like to have my perspective and belief systems challenged so that I see the world through new eyes.</p>
       <span class="text-brand-1 text-sm">&lt;/p&gt;</span>
     </div>
-
-    <Image
-      src={Work}
-      alt="Code and Chill"
-      height={600}
-      class="rounded-3xl p-4 mx-auto sm:col-start-3 sm:col-end-7 xl:col-start-6 xl:col-end-8"
-    />
   </div>
 </section>

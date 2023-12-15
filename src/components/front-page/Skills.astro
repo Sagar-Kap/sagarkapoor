@@ -22,37 +22,31 @@ const LangArray: Array<LangList> = [
     image: HTML,
     heading: "HTML",
     href: "https://html.spec.whatwg.org/multipage/",
-    color: "html",
+    color: "text-html",
   },
   {
     image: CSS,
     heading: "CSS",
     href: "https://www.w3.org/Style/CSS/",
-    color: "css",
+    color: "text-css",
   },
   {
     image: JS,
     heading: "JS",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    color: "js",
+    color: "text-js",
   },
   {
     image: REACT,
     heading: "REACT",
     href: "https://react.dev/",
-    color: "react",
+    color: "text-react",
   },
 ];
-
-const tr = "react";
 ---
 
-<section
-  id="skills"
-  style="background: linear-gradient(rgba(33, 41, 44, 0.87), rgba(29, 47, 54, 0.815)), 
-  url('code.png') no-repeat; background-size: cover;"
->
-  <div class="wb-container grid grid-cols-1 sm:grid-cols-8 py-10 gap-10 items-center">
+<section id="skills" class="bg-[url('skills.png')]">
+  <div class="wb-container grid grid-cols-1 sm:grid-cols-8 py-10 gap-10 items-center space-y-10">
     <div class="hidden lg:flex flex-col items-center gap-2 sm:col-start-4 sm:col-end-6">
       <Mouse class="text-3xl text-brand-1" />
       <Image src={Arrow} alt="Arrow" />
@@ -84,18 +78,18 @@ const tr = "react";
       <h3>Software Development</h3>
       <p class="text-base">Python·Node.js</p>
     </section>
-  </div>
 
-  <div class={`text-${tr}`} ->
-    {
-      LangArray.map((item) => {
-        return (
-          <div class="flex gap-4">
-            <Image src={item.image} alt={item.heading} />
-            <p class={`text-center text-2xl text-${item.color}`}>{item.heading}</p>
-          </div>
-        );
-      })
-    }
+    <div class="md:col-span-8 grid grid-cols-2 lg:grid-cols-4 gap-10 mx-auto">
+      {
+        LangArray.map((item) => {
+          return (
+            <a href={item.href} class="flex flex-col gap-6 m-5">
+              <Image src={item.image} alt={item.heading} class="hover:scale-110" />
+              <p class={`text-center text-2xl ${item.color}`}>{item.heading}</p>
+            </a>
+          );
+        })
+      }
+    </div>
   </div>
 </section>
