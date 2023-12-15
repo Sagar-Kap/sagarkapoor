@@ -51,7 +51,7 @@ const MiniMenuInteractive = () => {
   return (
     <nav
       class="border-white border rounded-t-full rounded-b-full hidden lg:flex flex-col
-          items-center bg-bg-2 fixed gap-6 p-5"
+          items-center bg-bg-2 fixed gap-6 p-5 z-10"
     >
       {menuArray.map((item) => {
         return (

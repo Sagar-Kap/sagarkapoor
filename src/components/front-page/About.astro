@@ -1,32 +1,52 @@
 ---
+import { Image } from "astro:assets";
+import Work from "../../assets/work.png";
+import Arrow from "../../assets/arrow.svg";
 import Mouse from "~icons/iconamoon/mouse";
 ---
 
 <section
   id="about"
-  class="items-center flex flex-col my-16 py-16 bg-bg-2
-         gap-10 mx-auto brightness-50 bg-cover bg-no-repeat bg-center bg-[url('../../public/topography.png')]"
+  style="background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), 
+  url('topography.png') no-repeat; background-size: cover;"
 >
-  <h2
-    class="border-4 text-center mx-auto bg-bg-1 px-9 py-4 border-brand-1 rounded-br-2xl
-             rounded-tl-2xl text-4xl font-sans"
-  >
-    About Me
-  </h2>
+  <div class="wb-container grid grid-cols-1 sm:grid-cols-8 py-10 gap-10 my-10 items-center">
+    <div class="hidden lg:flex flex-col items-center gap-2 sm:col-start-4 sm:col-end-6">
+      <Mouse class="text-3xl text-brand-1" />
+      <Image src={Arrow} alt="Arrow" />
+    </div>
 
-  <div class="bg-bg-1 flex flex-col text-left gap-6 p-4 border-1 rounded-2xl mx-4">
-    <span class="text-brand-1 text-sm">&lt;p&gt;</span>
-    <span class="text-brand-1 text-4xl">Hello!</span>
+    <h2
+      class="border-4 mx-auto bg-bg-1 px-9 py-4 border-brand-1
+    rounded-br-3xl rounded-tl-3xl text-4xl font-sans sm:col-start-2 sm:col-end-5 sm:ml-0"
+    >
+      About Me
+    </h2>
 
-    <p>My name is Sagar and I specialize in web developement that utilizes HTML, CSS, JS, and REACT etc.</p>
-    <p>
-      I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that
-      works. Striving to never stop learning and improving.
-    </p>
-    <p>
-      When I'm not coding, I am writing bolgs, reading, or picking up some new hands-on art project like photography.
-    </p>
-    <p>I like to have my perspective and belief systems challenged so that I see the world through new eyes.</p>
-    <span class="text-brand-1 text-sm">&lt;/p&gt;</span>
+    <div
+      class="bg-bg-1 flex flex-col text-left gap-6 p-4 md:p-10 border-1 rounded-2xl
+       mx-4 sm:ml-0 sm:col-start-2 sm:col-end-8 xl:col-start-2 xl:col-end-6"
+    >
+      <span class="text-brand-1 text-sm">&lt;p&gt;</span>
+      <span class="text-brand-1 text-4xl">Hello!</span>
+
+      <p>My name is Sagar and I specialize in web developement that utilizes HTML, CSS, JS, and REACT etc.</p>
+      <p>
+        I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that
+        works. Striving to never stop learning and improving.
+      </p>
+      <p>
+        When I'm not coding, I am writing bolgs, reading, or picking up some new hands-on art project like photography.
+      </p>
+      <p>I like to have my perspective and belief systems challenged so that I see the world through new eyes.</p>
+      <span class="text-brand-1 text-sm">&lt;/p&gt;</span>
+    </div>
+
+    <Image
+      src={Work}
+      alt="Code and Chill"
+      height={600}
+      class="rounded-3xl p-4 mx-auto sm:col-start-3 sm:col-end-7 xl:col-start-6 xl:col-end-8"
+    />
   </div>
 </section>
