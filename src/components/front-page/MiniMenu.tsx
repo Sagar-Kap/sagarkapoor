@@ -4,7 +4,7 @@ import Grid from "~icons/bx/bxs-grid-alt";
 import Code from "~icons/bx/code";
 import Person from "~icons/bx/user";
 import MailIcon from "~icons/ic/round-mail-outline";
-import Monitor from "~icons/ic/round-monitor";
+import Monitor from "~icons/mdi/monitor";
 
 type menuIcons = {
   icon: typeof Grid | typeof Person | typeof Code | typeof Edit | typeof Monitor | typeof MailIcon;

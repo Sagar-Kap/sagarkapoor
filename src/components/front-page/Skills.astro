@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import Arrow from "../../assets/arrow.svg";
+import Mouse from "~icons/iconamoon/mouse";
+import Underline from "../../assets/skillsUnderline.svg";
+import Monitor from "~icons/mdi/monitor";
+import Software from "~icons/bx/terminal";
+import HTML from "../../assets/html.png";
+import CSS from "../../assets/css.png";
+import JS from "../../assets/js.png";
+import REACT from "../../assets/react.png";
+
+type LangList = {
+  image: ImageMetadata;
+  heading: string;
+  href: string;
+  color: string;
+};
+
+const LangArray: Array<LangList> = [
+  {
+    image: HTML,
+    heading: "HTML",
+    href: "https://html.spec.whatwg.org/multipage/",
+    color: "html",
+  },
+  {
+    image: CSS,
+    heading: "CSS",
+    href: "https://www.w3.org/Style/CSS/",
+    color: "css",
+  },
+  {
+    image: JS,
+    heading: "JS",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    color: "js",
+  },
+  {
+    image: REACT,
+    heading: "REACT",
+    href: "https://react.dev/",
+    color: "react",
+  },
+];
+
+const tr = "react";
+---
+
+<section
+  id="skills"
+  style="background: linear-gradient(rgba(33, 41, 44, 0.87), rgba(29, 47, 54, 0.815)), 
+  url('code.png') no-repeat; background-size: cover;"
+>
+  <div class="wb-container grid grid-cols-1 sm:grid-cols-8 py-10 gap-10 items-center">
+    <div class="hidden lg:flex flex-col items-center gap-2 sm:col-start-4 sm:col-end-6">
+      <Mouse class="text-3xl text-brand-1" />
+      <Image src={Arrow} alt="Arrow" />
+    </div>
+
+    <span class="text-brand-2 text-8xl font-sans hidden lg:block col-start-6">&lt;/&gt;</span>
+
+    <div class="flex flex-col items-center gap-2 sm:col-start-3 sm:col-end-7
+       text-brand-1">
+      <h2 class="text-6xl font-sans">Skills</h2>
+      <Image src={Underline} alt="Underline" />
+      <p class="text-white">I am striving to never stop learning and improving</p>
+    </div>
+
+    <section
+      class="flex flex-col sm:col-start-2 sm:col-span-3 items-center gap-2 bg-brand-1
+           text-bg-2 text-2xl px-24 py-4 rounded-3xl"
+    >
+      <Monitor />
+      <h3>Web Development</h3>
+      <p class="text-base">HTML·CSS·JS·REACT</p>
+    </section>
+
+    <section
+      class="flex flex-col sm:col-span-3 items-center gap-2 bg-brand-1
+         text-bg-2 text-2xl px-24 py-4 rounded-3xl"
+    >
+      <Software />
+      <h3>Software Development</h3>
+      <p class="text-base">Python·Node.js</p>
+    </section>
+  </div>
+
+  <div class={`text-${tr}`} ->
+    {
+      LangArray.map((item) => {
+        return (
+          <div class="flex gap-4">
+            <Image src={item.image} alt={item.heading} />
+            <p class={`text-center text-2xl text-${item.color}`}>{item.heading}</p>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
