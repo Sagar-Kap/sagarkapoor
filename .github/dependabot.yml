@@ -15,7 +15,7 @@ updates:
       prefix: "chore: "
 
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/web"
     schedule:
       interval: "daily"
       time: "08:00"
