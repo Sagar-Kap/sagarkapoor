@@ -1,0 +1,15 @@
+version: "3"
+
+silent: true
+
+tasks:
+  default:
+    desc: Run a development version of the project
+    summary: |
+      Run a development version of the project locally
+
+      This task will run the local development version of the website and
+      setup the correct IP address and the ports to make the website accessible
+      on a network.
+    dir: ./web
+    cmd: npm run dev -- --host
