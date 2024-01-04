@@ -10,7 +10,11 @@ import Download from "~icons/ic/outline-file-download";
 
 type HeroListItems = {
   icon: typeof MailIcon | typeof Location | typeof Work | typeof Link;
-  title: "sagar.kapoor@weburz.com" | "Sofia, Bulgaria" | "Full-Time" | "Weburz.com";
+  title:
+    | "sagar.kapoor@weburz.com"
+    | "Sofia, Bulgaria"
+    | "Full-Time"
+    | "Weburz.com";
   link:
     | "mailto:sagar.kapoor@weburz.com"
     | "https://maps.app.goo.gl/VDb3jH63HSdyMX9p6"
@@ -30,13 +34,24 @@ type HeroButtons = {
 const herobuttons: Array<HeroButtons> = [
   { title: "REACT", link: "https://react.dev/" },
   { title: "NEXT.JS", link: "https://nextjs.org/" },
-  { title: "JAVASCRIPT", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  {
+    title: "JAVASCRIPT",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
   { title: "NODE.JS", link: "https://nodejs.org/en" },
 ];
 
 const herolist: Array<HeroListItems> = [
-  { icon: MailIcon, title: "sagar.kapoor@weburz.com", link: "mailto:sagar.kapoor@weburz.com" },
-  { icon: Location, title: "Sofia, Bulgaria", link: "https://maps.app.goo.gl/VDb3jH63HSdyMX9p6" },
+  {
+    icon: MailIcon,
+    title: "sagar.kapoor@weburz.com",
+    link: "mailto:sagar.kapoor@weburz.com",
+  },
+  {
+    icon: Location,
+    title: "Sofia, Bulgaria",
+    link: "https://maps.app.goo.gl/VDb3jH63HSdyMX9p6",
+  },
   { icon: Work, title: "Full-Time", link: "/portfolio" },
   { icon: Link, title: "Weburz.com", link: "https://weburz.com" },
 ];
@@ -52,8 +67,10 @@ const herolist: Array<HeroListItems> = [
 >
   {/* INFO: Div for the Info card*/}
 
-  <h1 class="col-span-5 xl:col-span-1 ml-4 xl:col-start-5 hidden lg:block text-brand-2
-      font-sans text-6xl">
+  <h1
+    class="col-span-5 xl:col-span-1 ml-4 xl:col-start-5 hidden lg:block text-brand-2
+      font-sans text-6xl"
+  >
     Developer
   </h1>
 
@@ -94,7 +111,7 @@ const herolist: Array<HeroListItems> = [
         herobuttons.map((item) => {
           return (
             <button
-              class="rounded-3xl border-2 py-1 px-1 bg-brand-1 text-bg-1 border-none 
+              class="rounded-3xl border-2 py-1 px-1 bg-brand-1 text-bg-1 border-none
               text-xs hover:scale-105"
             >
               {item.title}
@@ -106,14 +123,17 @@ const herolist: Array<HeroListItems> = [
 
     {/* INFO: Button to download Resume*/}
 
-    <button class="flex items-center gap-4 rounded-3xl border-2 py-2 mr-auto px-4
+    <button
+      class="flex items-center gap-4 rounded-3xl border-2 py-2 mr-auto px-4
       font-sans bg-white text-bg-1"
       >Download CV {(<Download />)}</button
     >
   </div>
 
-  <div class="flex flex-col gap-6 md:col-span-2 lg:col-start-2 xl:col-span-5
-       xl:col-start-5 mx-4 sm:mx-10">
+  <div
+    class="flex flex-col gap-6 md:col-span-2 lg:col-start-2 xl:col-span-5
+       xl:col-start-5 mx-4 sm:mx-10"
+  >
     <section class="text-left">
       <span class="text-brand-1 text-sm">&lt;h1&gt;</span>
 
@@ -131,13 +151,14 @@ const herolist: Array<HeroListItems> = [
       <span class="text-brand-1 text-sm">&lt;p&gt;</span>
 
       <p class="ml-5">
-        I help businesses grow by crafting amazing web experiences. If you&apos;re looking for a developer that likes to
-        get stuff done, then
+        I help businesses grow by crafting amazing web experiences. If
+        you&apos;re looking for a developer that likes to get stuff done, then
       </p>
       <span class="text-brand-1 text-sm">&lt;/p&gt;</span>
     </section>
 
-    <span class="text-brand-1 ml-5 my-2 text-3xl text flex flex-row items-center gap-4"
+    <span
+      class="text-brand-1 ml-5 my-2 text-3xl text flex flex-row items-center gap-4"
       >Let's Talk <MailIcon class="bg-grey rounded-full p-2 text-3xl" />
     </span>
   </div>
@@ -153,8 +174,10 @@ const herolist: Array<HeroListItems> = [
       <span class="text-brand-1 text-5xl">6</span> Development Tools
     </p>
     <p class="flex items-center gap-4">
-      <span class="text-brand-1 text-5xl">{new Date().getFullYear() - 2022}</span>
-       Years of Experience
+      <span class="text-brand-1 text-5xl"
+        >{new Date().getFullYear() - 2022}</span
+      >
+      Years of Experience
     </p>
   </section>
 </section>

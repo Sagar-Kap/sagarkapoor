@@ -68,19 +68,29 @@ const skillsArray: Array<SkillsList> = [
 ---
 
 <section id="skills" class="bg-[url('skills.png')]">
-  <div class="wb-container grid grid-cols-1 sm:grid-cols-8 py-20 gap-10 items-center space-y-10">
-    <div class="hidden lg:flex flex-col items-center gap-2 sm:col-start-4 sm:col-end-6">
+  <div
+    class="wb-container grid grid-cols-1 sm:grid-cols-8 py-20 gap-10 items-center space-y-10"
+  >
+    <div
+      class="hidden lg:flex flex-col items-center gap-2 sm:col-start-4 sm:col-end-6"
+    >
       <Mouse class="text-3xl text-brand-1" />
       <Image src={Arrow} alt="Arrow" />
     </div>
 
-    <span class="text-brand-2 text-8xl font-sans hidden lg:block col-start-6">&lt;/&gt;</span>
+    <span class="text-brand-2 text-8xl font-sans hidden lg:block col-start-6"
+      >&lt;/&gt;</span
+    >
 
-    <div class="flex flex-col items-center gap-2 sm:col-start-3 sm:col-end-7
-       text-brand-1">
+    <div
+      class="flex flex-col items-center gap-2 sm:col-start-3 sm:col-end-7
+       text-brand-1"
+    >
       <h2 class="text-6xl font-sans">Skills</h2>
       <Image src={Underline} alt="Underline" />
-      <p class="text-white">I am striving to never stop learning and improving</p>
+      <p class="text-white">
+        I am striving to never stop learning and improving
+      </p>
     </div>
 
     <div class="sm:col-span-8 sm:grid-cols-8 grid grid-cols-1 gap-10 mx-5">
@@ -106,7 +116,11 @@ const skillsArray: Array<SkillsList> = [
         LangArray.map((item) => {
           return (
             <a href={item.href} class="flex flex-col gap-6">
-              <Image src={item.image} alt={item.heading} class="hover:scale-110" />
+              <Image
+                src={item.image}
+                alt={item.heading}
+                class="hover:scale-110"
+              />
               <p class={`text-center text-2xl ${item.color}`}>{item.heading}</p>
             </a>
           );
