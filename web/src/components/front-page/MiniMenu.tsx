@@ -7,7 +7,13 @@ import MailIcon from "~icons/ic/round-mail-outline";
 import Monitor from "~icons/mdi/monitor";
 
 type menuIcons = {
-  icon: typeof Grid | typeof Person | typeof Code | typeof Edit | typeof Monitor | typeof MailIcon;
+  icon:
+    | typeof Grid
+    | typeof Person
+    | typeof Code
+    | typeof Edit
+    | typeof Monitor
+    | typeof MailIcon;
   title: "Default" | "About Me" | "Skills" | "Work" | "Blogs" | "Contact";
   link: "#home" | "#about" | "#skills" | "#work" | "#blogs" | "#contact";
 };
@@ -58,8 +64,10 @@ const MiniMenuInteractive = () => {
           <a
             onClick={() => setClick(item.link)}
             href={item.link}
-            class={`hover:scale-125 text-lg 
-                  hover:text-brand-1 ${isClicked === item.link ? "text-brand-1" : ""}`}
+            class={`hover:scale-125 text-lg
+                  hover:text-brand-1 ${
+                    isClicked === item.link ? "text-brand-1" : ""
+                  }`}
           >
             <item.icon />
           </a>

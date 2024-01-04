@@ -20,7 +20,9 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
 
   //INFO: Prevent Scroll When Mobile NavBar is open
   useEffect(() => {
-    isMenuOpen ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden");
+    isMenuOpen
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
   }, [isMenuOpen]);
 
   return (
@@ -34,20 +36,31 @@ const Menu = ({ openMenu, closeMenu, currentPath }: any) => {
         </a>
 
         {/* INFO: Mobile menu button for mobile devices and related small screens */}
-        <button type="button" onClick={() => setMenuOpen(!isMenuOpen)} className="md:hidden z-10">
+        <button
+          type="button"
+          onClick={() => setMenuOpen(!isMenuOpen)}
+          className="md:hidden z-10"
+        >
           <span className="sr-only">Close Main Menu</span>
 
-          <div className={`text-2xl stroke-white ${isMenuOpen ? "" : "hidden"}`}>{closeMenu}</div>
+          <div
+            className={`text-2xl stroke-white ${isMenuOpen ? "" : "hidden"}`}
+          >
+            {closeMenu}
+          </div>
 
-          <div className={`text-2xl ${isMenuOpen ? "hidden" : ""}`}>{openMenu}</div>
+          <div className={`text-2xl ${isMenuOpen ? "hidden" : ""}`}>
+            {openMenu}
+          </div>
         </button>
 
         {/* INFO: Navigation links */}
         <span
-          className={`flex md:flex flex-col md:flex-row gap-10 text-4xl md:text-lg fixed 
-                    md:static bg-opacity-95 bg-black md:bg-inherit pt-44 md:pt-0 
-                    inset-0 md:left-0 duration-300
-                    ${isMenuOpen ? "left-0 items-center" : "left-[100%]"}`}
+          className={`flex md:flex flex-col md:flex-row gap-10 text-4xl md:text-lg fixed
+            md:static bg-opacity-95 bg-black md:bg-inherit pt-44 md:pt-0 inset-0
+            md:left-0 duration-300 ${
+              isMenuOpen ? "left-0 items-center" : "left-[100%]"
+            }`}
         >
           {navlinks.map((link) => {
             const isActive = currentPath === link.href;

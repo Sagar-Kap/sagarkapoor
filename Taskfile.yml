@@ -13,3 +13,116 @@ tasks:
       on a network.
     dir: ./web
     cmd: npm run dev -- --host
+
+  setup:precommit:
+    internal: true
+    sources:
+      - .pre-commit-config.yaml
+    generates:
+      - ./git/hooks/pre-commit
+      - ./git/hooks/commit-msg
+    cmds:
+      - pre-commit install --install-hooks
+      - pre-commit install --hook-type commit-msg
+
+  setup:npm:
+    desc: Install the "npm" dependencies
+    summary: |
+      Install the "npm" dependencies.
+
+      This task will install the "npm" dependencies for the Astro project and
+      generate the "package-lock.json" file as well if it deems necessary.
+    dir: ./web
+    sources:
+      - package.json
+    generates:
+      - package-lock.json
+    cmd: npm ci
+
+  setup:
+    desc: Setup the local development environment
+    summary: |
+      Setup the local development environment for the project.
+
+      This task will install the node_modules and anything
+      else in preparation for starting a development environment for the project.
+    dir: ./web
+    cmds:
+      - task: setup:npm
+      - task: setup:precommit
+
+  build:
+    desc: Build the website statically on the local system.
+    summary: |
+      Build a local static version of the website.
+
+      The task will check for any issues in source code before generating the
+      static assets (the HTML, CSS and JS bundles) for the website. The command
+      can be used in an CI/CD environment or chained to another task.
+    dir: ./web
+    cmd: npm run build
+    generates:
+      - "./dist"
+    sources:
+      - "./src"
+      - "./public"
+
+  preview:
+    desc: Preview the local statically build version of the website.
+    summary: |
+      Preview the local static version of the website.
+
+      This task will load the statically generated version of the website
+      locally. Its helpful in checking for any errors or unintended behaviours
+      before deploying the website to production.
+    deps:
+      - task: build
+    dir: ./web
+    cmd: npm run preview
+
+  format:prettier:
+    internal: true
+    dir: ./web
+    cmd: npm run format:fix
+
+  format:
+    desc: Run various formatters on the entire source code
+    summary: |
+      Run various formatters on the entire source code.
+
+      This task will run "prettier" and such on the entire
+      code to ensure each and every line follows some standard practice of
+      authoring code.
+    cmds:
+      - task: format:prettier
+
+  qa-checks:npm:
+    internal: true
+    dir: ./web
+    cmd: npm run tests
+
+  qa-checks:
+    desc: Run QA checks on the entire source code
+    summary: |
+      Run QA checks on the entire source code.
+
+      This task will run all sorts of QA checks on the source code before its
+      prepared to be pushed to the remote repository for further production
+      deployment.
+    cmds:
+      - pre-commit run --all-files
+      - task: qa-checks:npm
+
+  cleanup:
+    desc: Perform a quick cleanup of the local development environment
+    summary: |
+      Perform a quick cleanup of the dev environment.
+
+      This task will remove the "node_modules","git-hooks" and more from the local
+      repository for a fresh start of the project.
+    cmds:
+      - rm --recursive --force "./web/node_modules"
+      - rm --recursive --force "./web/.astro"
+      - rm --recursive --force "./web/dist"
+      - rm --recursive --force "./.task"
+      - pre-commit clean 2&> /dev/null
