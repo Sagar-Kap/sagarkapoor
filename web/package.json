@@ -23,7 +23,7 @@
     "sharp": "^0.33.1"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.1.21",
+    "@iconify-json/bi": "^1.1.23",
     "@iconify-json/bx": "^1.1.10",
     "@iconify-json/ic": "^1.1.16",
     "@iconify-json/iconamoon": "^1.1.4",
