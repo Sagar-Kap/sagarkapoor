@@ -31,7 +31,7 @@
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-astro": "^0.31.0",
+    "eslint-plugin-astro": "^0.31.3",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.3",
     "prettier-plugin-astro": "^0.12.3",
