@@ -35,7 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0",
-    "unplugin-icons": "^0.18.3",
+    "unplugin-icons": "^0.18.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
