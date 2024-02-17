@@ -9,7 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [
       Icons({
-        compiler: "astro",
+        compiler: "jsx",
         jsx: "preact",
         autoInstall: true,
       }),
