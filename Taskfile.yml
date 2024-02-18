@@ -67,6 +67,19 @@ tasks:
       - "./src"
       - "./public"
 
+  start:
+    desc: Start the static build of the website.
+    summary: |
+      View the local build version of the website.
+
+      This task will help in loading the statically generated version of the
+      website with the help of the build command. It is helpful in visualising
+      what the finished product would look like before deployment.
+    deps:
+      - task: build
+    dir: ./web
+    cmd: npm start
+
   preview:
     desc: Preview the local statically build version of the website.
     summary: |
