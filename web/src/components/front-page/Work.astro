@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Slider from "./Slider.jsx";
 import Arrow from "../../assets/arrow.svg";
 import Mouse from "~icons/iconamoon/mouse";
 import Underline from "../../assets/skillsUnderline.svg";
@@ -30,5 +31,7 @@ import Underline from "../../assets/skillsUnderline.svg";
         I had the pleasure of working with these awesome projects
       </p>
     </div>
+
+    <Slider client:load />
   </div>
 </section>
