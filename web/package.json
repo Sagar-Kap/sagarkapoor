@@ -27,6 +27,7 @@
     "@iconify-json/bx": "^1.1.10",
     "@iconify-json/ic": "^1.1.16",
     "@iconify-json/iconamoon": "^1.1.4",
+    "@iconify-json/lucide": "^1.1.167",
     "@iconify-json/mdi": "^1.1.64",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
@@ -35,8 +36,8 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "unplugin-icons": "^0.18.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "unplugin-icons": "^0.18.5"
   }
 }
