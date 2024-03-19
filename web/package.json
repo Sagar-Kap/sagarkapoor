@@ -19,7 +19,7 @@
     "@fontsource/ibm-plex-mono": "^5.0.12",
     "@fontsource/ubuntu": "^5.0.12",
     "astro": "^3.6.5",
-    "preact": "^10.19.6",
+    "preact": "^10.19.7",
     "sharp": "^0.33.2"
   },
   "devDependencies": {
