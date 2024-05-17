@@ -20,7 +20,7 @@
     "@fontsource/ubuntu": "^5.0.13",
     "astro": "^3.6.5",
     "preact": "^10.22.0",
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.1.23",
