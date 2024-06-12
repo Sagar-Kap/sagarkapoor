@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/preact": "^3.3.0",
+    "@astrojs/preact": "^3.4.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/ibm-plex-mono": "^5.0.13",
     "@fontsource/ubuntu": "^5.0.13",
