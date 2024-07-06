@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "nuxt typecheck && eslint .",
+    "format": "prettier . --write",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
