@@ -1,0 +1,45 @@
+name: Code QA Checks
+
+on:
+  pull_request:
+    types:
+      - ready_for_review
+      - opened
+      - edited
+      - synchronize
+
+permissions: read-all
+
+jobs:
+  ########################################################################
+  # QA checks for the source code on the front end
+  ########################################################################
+  qa-check-front-end:
+    name: "[FRONT END] Code Quality Check"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./web
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.1.7
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4.0.0
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: "./admin-panel/pnpm-lock.yaml"
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Run QA Check Tools
+        run: |
+          pnpm run lint
+          pnpm run format
