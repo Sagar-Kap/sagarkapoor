@@ -1,5 +1,5 @@
 {
-  "name": "sagarkapoor",
+  "name": "nuxt-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,9 +12,5 @@
   "dependencies": {
     "nuxt": "^3.12.3",
     "vue": "latest"
-  },
-  "devDependencies": {
-    "prettier": "^3.2.5",
-    "prettier-plugin-organize-imports": "^4.0.0"
   }
 }
