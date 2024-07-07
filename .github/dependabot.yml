@@ -12,7 +12,7 @@ updates:
     assignees:
       - Sagar-Kap
     commit-message:
-      prefix: "chore: "
+      prefix: "chore(deps): "
 
   - package-ecosystem: "npm"
     directory: "/web"
@@ -25,11 +25,4 @@ updates:
     assignees:
       - Sagar-Kap
     commit-message:
-      prefix: "chore: "
-    ignore:
-      - dependency-name: astro
-        update-types:
-          - version-update:semver-major
-      - dependency-name: eslint
-        update-types:
-          - version-update:semver-major
+      prefix: "chore(deps): "
