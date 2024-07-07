@@ -22,6 +22,7 @@ tasks:
       and more such commands will be automated using this command.
     cmds:
       - pre-commit install --install-hooks
+      - pre-commit install --hook-type commit-msg
       - task: setup:front-end
 
   qa-checks:
