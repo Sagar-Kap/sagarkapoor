@@ -4,7 +4,7 @@ This repository is the abode of my digital dojo hosted on [sagarkapoor.eu](https
 The list of tools used to work on its infrastructure is as follows:
 
 - [Nuxt](https://nuxt.com/) for the front end.
-- [Taskfile]](https://taskfile.dev/) to set up the development environment.
+- [Taskfile](https://taskfile.dev/) to set up the development environment.
 
 ## About the Project
 
