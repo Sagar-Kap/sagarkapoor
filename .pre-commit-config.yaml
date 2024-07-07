@@ -37,4 +37,4 @@ repos:
           - sass
         args:
           - --config
-          - ./web/.prettierrc.json
+          - ./front-end/.prettierrc.json
