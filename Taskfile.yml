@@ -24,6 +24,17 @@ tasks:
       - pre-commit install --install-hooks
       - task: setup:front-end
 
+  qa-checks:
+    desc: Run all sorts of QA checks on the source code.
+    summary: |
+      Run all sorts of QA checks on the source code.
+
+      This task will intelligently run all sorts of QA checks on the source
+      code. The tools used to perform the task are ESLint, Prettier and more.
+    cmds:
+      - task: qa-checks:front-end
+      - pre-commit run --all-files
+
   ##########################################################################
   # Internal dependencies for setting up the dev environment
   ##########################################################################
@@ -37,3 +48,14 @@ tasks:
       - package.json
     generates:
       - pnpm-lock.yaml
+
+  ##########################################################################
+  # Tasks to format the code for different services
+  ##########################################################################
+
+  qa-checks:front-end:
+    internal: true
+    dir: ./front-end
+    cmds:
+      - pnpm run lint
+      - pnpm run format

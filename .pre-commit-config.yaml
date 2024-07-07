@@ -21,7 +21,7 @@ repos:
         additional_dependencies: ["@commitlint/config-conventional"]
 
   ###################################################################
-  # Hooks to QA the frontend source code for the "Admin Panel"
+  # Hooks to QA the frontend source code for the Blog
   ###################################################################
 
   - repo: https://github.com/pre-commit/mirrors-prettier
