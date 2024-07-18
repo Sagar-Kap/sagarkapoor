@@ -19,6 +19,14 @@ You will need these tools to get started with dev work on this software:
 3. [Task](https://taskfile.dev/)
 4. [Pre Commit](https://pre-commit.com/)
 
+## Steps required to get your dev environment up and running:
+
+1. Install the tools mentioned above.
+2. Run `task setup` once step 1 is complete. All `task` commands should be run from the
+   root directory.
+3. Run `task qa-checks` to lint and format your code before making a commit.
+4. Run `task default` to check the list of `tasks` available.
+
 Once you have installed these tools, fork this repository. Check out the
 [issues](https://github.com/Sagar-Kap/sagarkapoor/issues) in this repository and then open a
 [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
