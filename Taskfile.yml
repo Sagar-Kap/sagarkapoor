@@ -36,6 +36,13 @@ tasks:
       - task: qa-checks:front-end
       - pre-commit run --all-files
 
+  dev:
+    desc: Run development version of the project.
+    summary: |
+      This task will run the local development version of the website.
+    dir: ./front-end
+    cmd: pnpm run dev
+
   ##########################################################################
   # Internal dependencies for setting up the dev environment
   ##########################################################################
