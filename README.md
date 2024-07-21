@@ -17,7 +17,7 @@ You will need these tools to get started with dev work on this software:
 1. [Node.js](https://nodejs.org/en)
 2. [PNPM](https://pnpm.io/)
 3. [Task](https://taskfile.dev/)
-4. [Pre Commit](https://pre-commit.com/)
+4. [Pre-Commit](https://pre-commit.com/)
 
 ## Steps required to get your dev environment up and running
 
