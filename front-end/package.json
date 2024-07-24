@@ -18,12 +18,12 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.3.10",
     "@vue/typescript": "^1.8.20",
-    "@vue/typescript-plugin": "^2.0.16",
+    "@vue/typescript-plugin": "^2.0.28",
     "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.0.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.4"
   }
 }
