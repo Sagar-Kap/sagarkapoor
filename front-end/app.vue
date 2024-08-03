@@ -5,5 +5,7 @@
 </template>
 
 <style lang="scss">
-@use "~/assets/styles/main.scss";
+body {
+  background-color: $BG1;
+}
 </style>
