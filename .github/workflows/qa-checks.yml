@@ -14,12 +14,12 @@ jobs:
   ########################################################################
   # QA checks for the source code on the front end
   ########################################################################
-  qa-check-front-end:
+  qa-check-website:
     name: "[FRONT END] Code Quality Check"
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./front-end
+        working-directory: ./website
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-          cache-dependency-path: "./front-end/pnpm-lock.yaml"
+          cache-dependency-path: "./website/pnpm-lock.yaml"
 
       - name: Install Dependencies
         run: pnpm install
