@@ -23,7 +23,7 @@ tasks:
     cmds:
       - pre-commit install --install-hooks
       - pre-commit install --hook-type commit-msg
-      - task: setup:front-end
+      - task: setup:website
 
   qa-checks:
     desc: Run all sorts of QA checks on the source code.
@@ -33,24 +33,24 @@ tasks:
       This task will intelligently run all sorts of QA checks on the source
       code. The tools used to perform the task are ESLint, Prettier and more.
     cmds:
-      - task: qa-checks:front-end
+      - task: qa-checks:website
       - pre-commit run --all-files
 
   dev:
     desc: Run development version of the project.
     summary: |
       This task will run the local development version of the website.
-    dir: ./front-end
+    dir: ./website
     cmd: pnpm run dev
 
   ##########################################################################
   # Internal dependencies for setting up the dev environment
   ##########################################################################
 
-  setup:front-end:
+  setup:website:
     internal: true
     desc: Setup the dev environment for the Front End
-    dir: ./front-end
+    dir: ./website
     cmd: pnpm install
     sources:
       - package.json
@@ -61,9 +61,9 @@ tasks:
   # Tasks to format the code for different services
   ##########################################################################
 
-  qa-checks:front-end:
+  qa-checks:website:
     internal: true
-    dir: ./front-end
+    dir: ./website
     cmds:
       - pnpm run lint
       - pnpm run format
