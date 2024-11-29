@@ -2,6 +2,13 @@
   <div>Blog Page</div>
 </template>
 
-<script setup></script>
-
-<style></style>
+<script lang="ts" setup>
+useSeoMeta({
+  title: "Blog",
+  ogTitle: "Blog | Sagar Kapoor",
+  description: "",
+  ogDescription: "",
+  ogImage: "",
+  twitterCard: "summary_large_image",
+});
+</script>

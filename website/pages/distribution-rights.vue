@@ -2,6 +2,13 @@
   <div>Distribution Rights Page</div>
 </template>
 
-<script setup></script>
-
-<style></style>
+<script lang="ts" setup>
+useSeoMeta({
+  title: "Distribution Rights",
+  ogTitle: "Distribution Rights | Sagar Kapoor",
+  description: "",
+  ogDescription: "",
+  ogImage: "",
+  twitterCard: "summary_large_image",
+});
+</script>
