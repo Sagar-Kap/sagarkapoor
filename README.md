@@ -45,4 +45,4 @@ The Figma design used for this project:
 
 [Link to design](https://www.figma.com/design/rM3Gh1i27kKhSytmEHaK9k/Sagar's-Portfolio?node-id=3-572&t=MPuaQ2GFeMZ40i1G-1)
 
-![Design cover](/front-end/public/figma-design.png)
+![Design cover](/website/public/figma-design.png)
