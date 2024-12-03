@@ -1,14 +1,13 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "Sagar Kapoor",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "nuxt typecheck && eslint .",
-    "format": "prettier . --write",
+    "format": "prettier .",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
