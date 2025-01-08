@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <NuxtPage />
-  </div>
+  <NuxtPage />
 </template>
 
 <style lang="scss">
 body {
-  background-color: $BG1;
+  background-color: #1c1c1c;
 }
 </style>
 
