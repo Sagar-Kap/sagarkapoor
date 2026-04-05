@@ -38,12 +38,6 @@ To get started with developing the project, follow these instructions:
 5. Push the commits to your fork and then create a Pull Request to the upstream
    repository from the said fork whenever you are ready.
 
-## Additional Resources
-
-[Figma Template](https://www.figma.com/design/rM3Gh1i27kKhSytmEHaK9k/Sagar's-Portfolio?node-id=3-572&t=MPuaQ2GFeMZ40i1G-1)
-
-![Sneak Peak](/website/public/figma-design.png)
-
 ## Licensing and Distribution Rights
 
 This source code in this repository is made publicly available under the terms
